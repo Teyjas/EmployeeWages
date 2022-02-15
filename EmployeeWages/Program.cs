@@ -1,35 +1,36 @@
 ﻿using System;
-
-
-    namespace EmployeeWages
+//Employee Daily Wage
+namespace EmployeeWages
 {
-    class Program
+    class program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            //int PRESNT = 0;
-            //int partial_present = 1;
+            int WorkingHr = 0;
+            int perHrSalary = 20;
 
-            //Random random = new Random();
-            //int empcheck = random.Next(0, 3);
-            //if (empcheck == PRESNT)
-            //{
-            //    Console.WriteLine("employee is present");
-            //}
-            //else if (empcheck == partial_present)
-            //{
-            //    Console.WriteLine("employee is partial present");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("employee is absent");
-            //}
-            int[] dailyWages = new int[5];
-            for (int i = 0; i <= 5; i++)
+            Random rnd = new Random();
+            int present = (rnd.Next(20));
+
+            switch (present)
             {
-                dailyWages[i] = i;
-            }
-        }
+                case 0:
+                    Console.WriteLine("employee  is Absent");
+                    WorkingHr = 0;
+                    break;
 
+                case 1:
+                    Console.WriteLine("employee  is Present");
+                    WorkingHr = 8;
+                    break;
+
+                default:
+                    Console.WriteLine("error");
+                    break;
+            }
+
+            int salary = WorkingHr * perHrSalary;
+            Console.WriteLine($"Salary {salary}");
+        }
     }
 }
