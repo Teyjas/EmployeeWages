@@ -1,27 +1,34 @@
 ﻿using System;
-//Employee Daily Wage
+//Ad part time employee wage
 namespace EmployeeWages
 {
     class program
     {
         public static void Main(string[] args)
         {
-            int WorkingHr = 0;
+            Console.WriteLine($"Employee Wage Calculator");
+            int workingHr = 0;
             int perHrSalary = 20;
+            int totalSalary = 0;
 
             Random rnd = new Random();
-            int present = (rnd.Next(20));
+            int present = (rnd.Next(3));
 
             switch (present)
             {
                 case 0:
                     Console.WriteLine("employee  is Absent");
-                    WorkingHr = 0;
+                    workingHr = 0;
                     break;
 
                 case 1:
                     Console.WriteLine("employee  is Present");
-                    WorkingHr = 8;
+                    workingHr = 8;
+                    break;
+
+                case 2:
+                    Console.WriteLine("Employee is part time present");
+                    workingHr = 4;
                     break;
 
                 default:
@@ -29,8 +36,10 @@ namespace EmployeeWages
                     break;
             }
 
-            int salary = WorkingHr * perHrSalary;
-            Console.WriteLine($"Salary {salary}");
+            int salary = perHrSalary * workingHr;
+            totalSalary = totalSalary + salary;
+            Console.WriteLine($"Total Salary {totalSalary}");
+
         }
     }
 }
