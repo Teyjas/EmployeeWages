@@ -4,7 +4,7 @@ namespace EmployeeWages
 {
     class program
     {
-        public static void Main(string[] args)
+        public static void GetEmpWage()
         {
             Console.WriteLine($"Employee Wage Calculator");
             int workingHr = 0;
@@ -53,7 +53,13 @@ namespace EmployeeWages
             Console.WriteLine($"Total Salary: {totalSalary}");
             Console.WriteLine($"Total working hours: {totalHrs}");
         }
+        public static void Main(String[] args)
 
-        
+        {
+            Console.WriteLine($"Employee Wage Calculator");
+            GetEmpWage();
+
+    }
+
     }
 }
