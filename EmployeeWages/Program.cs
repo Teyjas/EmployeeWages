@@ -1,5 +1,5 @@
 ﻿using System;
-//Ad part time employee wage
+//Employee wage for 20 days
 namespace EmployeeWages
 {
     class program
@@ -11,35 +11,40 @@ namespace EmployeeWages
             int perHrSalary = 20;
             int totalSalary = 0;
 
-            Random rnd = new Random();
-            int present = (rnd.Next(3));
-
-            switch (present)
+            for (int day = 0; day <= 20; day++)
             {
-                case 0:
-                    Console.WriteLine("employee  is Absent");
-                    workingHr = 0;
-                    break;
 
-                case 1:
-                    Console.WriteLine("employee  is Present");
-                    workingHr = 8;
-                    break;
+                Random rnd = new Random();
+                int present = (rnd.Next(3));
 
-                case 2:
-                    Console.WriteLine("Employee is part time present");
-                    workingHr = 4;
-                    break;
+                switch (present)
+                {
+                    case 0:
+                        Console.WriteLine("employee  is Absent");
+                        workingHr = 0;
+                        break;
 
-                default:
-                    Console.WriteLine("error");
-                    break;
+                    case 1:
+                        Console.WriteLine("employee  is Present");
+                        workingHr = 8;
+                        break;
+
+                    case 2:
+                        Console.WriteLine("Employee is part time present");
+                        workingHr = 4;
+                        break;
+
+                    default:
+                        Console.WriteLine("error");
+                        break;
+                }
             }
 
             int salary = perHrSalary * workingHr;
-            totalSalary = totalSalary + salary;
-            Console.WriteLine($"Total Salary {totalSalary}");
-
+            totalSalary = return (totalSalary + salary);
         }
+        Console.WriteLine($ "Total Salary {total salary}");
+
+        
     }
 }
