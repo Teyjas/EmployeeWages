@@ -1,5 +1,5 @@
 ﻿using System;
-//Employee wage for 20 days
+//Total_working_hours
 namespace EmployeeWages
 {
     class program
@@ -10,6 +10,7 @@ namespace EmployeeWages
             int workingHr = 0;
             int perHrSalary = 20;
             int totalSalary = 0;
+            int totalHrs = 0;
 
             for (int day = 0; day <= 20; day++)
             {
@@ -38,12 +39,20 @@ namespace EmployeeWages
                         Console.WriteLine("error");
                         break;
                 }
+
+
+                int salary = perHrSalary * workingHr;
+                totalSalary = (totalSalary + salary);
+
+                if (totalHrs >= 100)
+                {
+                    break;
+                }
             }
 
-            int salary = perHrSalary * workingHr;
-            totalSalary = return (totalSalary + salary);
+            Console.WriteLine($"Total Salary: {totalSalary}");
+            Console.WriteLine($"Total working hours: {totalHrs}");
         }
-        Console.WriteLine($ "Total Salary {total salary}");
 
         
     }
